@@ -19,6 +19,9 @@ def flip_coin():
     else:
         return "TAILS"
     
+def info_1():
+    print("COMANDOS DE BOT: Saludar = $hello, Despedir = $bye, Coin flip = $coin, Generar contraseña = $gen, Calculadora (solo sumar) = Cal ")
+    
 
     
     
