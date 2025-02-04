@@ -1,6 +1,6 @@
 import discord
 import random
-from bot_logic import gen_pass
+from bot_logic import gen_pass, info_1
 from bot_logic import flip_coin
 from discord.ext import commands
 
@@ -15,8 +15,12 @@ async def on_ready():
     print(f'Hemos iniciado sesión como {bot.user}')
 
 @bot.command()
+async def inf(ctx):
+    await ctx.send(info_1())
+
+@bot.command()
 async def hello(ctx):
-    await ctx.send(f"Hola, soy un bot {ctx.author}")
+    await ctx.send(f"Hola, soy un bot, {ctx.author}, para más ayuda, use $help")
 
 @bot.command()
 async def bye(ctx):
